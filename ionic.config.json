@@ -1,0 +1,7 @@
+{
+  "name": "clipbeat-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
