@@ -59,3 +59,14 @@
     }
   }
 }
+
+.submit-container {
+  position: sticky;   // o fixed si quieres que siempre quede visible incluso al scrollear ion-content
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: var(--ion-background-color, #fff);
+  z-index: 10;        // para que quede por encima del contenido
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); // opcional, sombra superior
+}
