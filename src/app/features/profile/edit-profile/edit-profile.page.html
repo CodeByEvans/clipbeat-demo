@@ -81,11 +81,12 @@
           fill="outline"
           label="Correo electrónico"
           labelPlacement="floating"
-          helperText="Ingresa un correo válido"
+          helperText="Ingresa un correo válido (.com o .es)"
           errorText="Correo inválido"
           required
           [(ngModel)]="user.email"
           email
+          pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(com|es)$"
         ></ion-input>
 
         <ion-input
