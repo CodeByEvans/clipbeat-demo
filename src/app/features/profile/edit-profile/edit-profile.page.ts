@@ -81,6 +81,8 @@ export class EditProfilePage {
       return;
     }
 
+    this.user.username = this.user.username.toLowerCase();
+
     // Guardamos en LocalStorage
     localStorage.setItem('userProfile', JSON.stringify(this.user));
 
