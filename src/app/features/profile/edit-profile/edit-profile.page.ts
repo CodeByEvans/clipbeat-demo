@@ -12,6 +12,7 @@ import {
   IonList,
   IonInput,
   ToastController,
+  IonFooter,
 } from '@ionic/angular/standalone';
 import { UserService } from 'src/app/services/user.service';
 
@@ -32,6 +33,7 @@ import { UserService } from 'src/app/services/user.service';
     IonBackButton,
     IonList,
     IonInput,
+    IonFooter,
   ],
 })
 export class EditProfilePage {

@@ -53,12 +53,13 @@
           label="Nombre de usuario"
           labelPlacement="floating"
           fill="outline"
-          errorText="El nombre de usuario debe tener entre 3 y 15 caracteres, y solo puede contener letras, numeros y guiones bajos"
+          errorText="El nombre de usuario debe tener entre 3 y 15 caracteres, y solo puede contener letras, números y guiones bajos"
           clearInput
           required
           [(ngModel)]="user.username"
           pattern="^[a-zA-Z0-9_]{3,15}$"
         ></ion-input>
+
         <ion-input
           name="biography"
           label="Biografía corta"
@@ -122,18 +123,13 @@
         ></ion-input>
       </ion-list>
     </section>
-
-    <!-- BOTÓN GUARDAR -->
-    <!-- BOTÓN GUARDAR FIJO ABAJO -->
-    <div class="submit-container">
-      <ion-button
-        class="save-button"
-        type="submit"
-        color="primary"
-        expand="block"
-      >
-        Guardar cambios
-      </ion-button>
-    </div>
   </form>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="save-button" expand="block" (click)="onSubmit(form)">
+      Guardar cambios
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
