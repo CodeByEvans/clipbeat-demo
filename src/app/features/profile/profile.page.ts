@@ -87,12 +87,12 @@ export class ProfilePage implements ViewWillEnter {
   socialLinks = [
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/evanslituma/',
+      url: 'https://www.instagram.com',
       icon: 'logo-instagram',
     },
     {
       name: 'Youtube',
-      url: 'https://www.youtube.com/@evanslituma',
+      url: 'https://www.youtube.com',
       icon: 'logo-youtube',
     },
   ];
