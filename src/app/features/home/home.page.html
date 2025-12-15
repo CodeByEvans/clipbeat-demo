@@ -1,0 +1,81 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Bienvenido a mi demo de ClipBeat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="welcome-page ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ClipBeat Demo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="intro-container" id="intro-container">
+    <h2>¡Hola! Soy <strong>Evans</strong>, desarrollador de la demo</h2>
+    <p>
+      Esta es la presentación de las funcionalidades y mejoras que he pensado e
+      implementado en mi demo de ClipBeat:
+    </p>
+
+    <!-- Lista de features elegante -->
+    <ion-list lines="none" id="feature-list" class="feature-list">
+      <ion-item button class="feature-item">
+        <ion-label>
+          <strong>UX mejorado:</strong> validación e integración de
+          <strong>toasts</strong> en formularios
+        </ion-label>
+      </ion-item>
+
+      <ion-item button class="feature-item">
+        <ion-label>
+          <strong>Perfil moderno:</strong> nuevo diseño visual del perfil de
+          usuario
+        </ion-label>
+      </ion-item>
+
+      <ion-item button class="feature-item">
+        <ion-label>
+          <strong>Compartir perfil:</strong> botón para compartir la URL del
+          usuario
+        </ion-label>
+      </ion-item>
+
+      <ion-item button class="feature-item">
+        <ion-label>
+          <strong>Redes sociales:</strong> botones para
+          <strong>Instagram, YouTube, TikTok</strong>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button class="feature-item">
+        <ion-label>
+          <strong>Formulario mejorado:</strong> diseño actualizado y más
+          elegante
+        </ion-label>
+      </ion-item>
+
+      <ion-item button class="feature-item">
+        <ion-label>
+          <strong>Sidebar de settings:</strong> botón hamburger que abre
+          opciones del perfil
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <p class="note">
+      Todos los elementos usan componentes Ionic con
+      <strong>estilo moderno</strong> y fondo sutil tipo botón para resaltar
+      cada sección.
+    </p>
+
+    <ion-button
+      expand="block"
+      color="primary"
+      [routerLink]="['/profile']"
+      class="go-to-profile-button"
+    >
+      Ir a mi perfil
+    </ion-button>
+  </div>
+</ion-content>

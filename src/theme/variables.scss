@@ -1,2 +1,38 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+body {
+    --ion-color-primary: #ffffff;
+    --ion-toolbar-background: #131a2d;
+    --ion-background-color: #131a2d;
+    --ion-item-background: transparent;
+    --button-bg-color: #ffffff0f;
+}
+
+
+ion-button {
+    --background: var(--button-bg-color);
+    --color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s, transform 0.2s;
+    text-transform: none;
+    &:hover {
+          --background: rgba(255, 255, 255, 0.1);
+          transform: scale(1.1);
+    }
+}
+
+
+ion-input {
+    --background: var(--button-bg-color);
+    --ion-item-background: var(--button-bg-color);
+}
+
+
+ion-back-button {
+    text-transform: none;
+}
+
+label {
+    background: transparent;
+}

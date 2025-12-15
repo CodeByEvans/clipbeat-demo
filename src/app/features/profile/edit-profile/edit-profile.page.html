@@ -1,0 +1,130 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/profile"
+        icon="chevron-back-outline"
+        text="Atrás"
+      ></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="title-default">Editar perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="edit-profile-page">
+  <form #form="ngForm" class="edit-profile-form" (ngSubmit)="onSubmit(form)">
+    <!-- FOTO DE PERFIL -->
+    <div class="profile-photo-container">
+      <div class="profile-photo">
+        <img [src]="profilePhoto" alt="Foto de perfil" />
+        <ion-button size="small" class="change-button" fill="solid">
+          Cambiar foto
+        </ion-button>
+      </div>
+    </div>
+
+    <!-- INFORMACIÓN BÁSICA -->
+    <section class="section-card">
+      <h3 class="section-title">Información básica</h3>
+      <ion-list class="name-list">
+        <ion-input
+          name="name"
+          label="Nombre"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          required
+          [(ngModel)]="user.name"
+        ></ion-input>
+
+        <ion-input
+          name="lastname"
+          label="Apellidos"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          required
+          [(ngModel)]="user.lastname"
+        ></ion-input>
+
+        <ion-input
+          name="username"
+          label="Nombre de usuario"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          required
+          [(ngModel)]="user.username"
+        ></ion-input>
+        <ion-input
+          name="biography"
+          label="Biografía corta"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          required
+          [(ngModel)]="user.biography"
+        ></ion-input>
+      </ion-list>
+    </section>
+
+    <!-- INFORMACIÓN PERSONAL -->
+    <section class="section-card">
+      <h3 class="section-title">Información personal</h3>
+      <ion-list class="items-list">
+        <ion-input
+          name="email"
+          type="email"
+          fill="outline"
+          label="Correo electrónico"
+          labelPlacement="floating"
+          helperText="Ingresa un correo válido"
+          errorText="Correo inválido"
+          required
+          [(ngModel)]="user.email"
+          email
+        ></ion-input>
+
+        <ion-input
+          name="birthdate"
+          type="date"
+          label="Fecha de nacimiento"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          required
+          [(ngModel)]="user.birthdate"
+        ></ion-input>
+
+        <ion-input
+          name="phone"
+          label="Número de teléfono"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          [(ngModel)]="user.phone"
+        ></ion-input>
+
+        <ion-input
+          name="city"
+          label="Provincia"
+          labelPlacement="floating"
+          fill="outline"
+          clearInput
+          [(ngModel)]="user.city"
+        ></ion-input>
+      </ion-list>
+    </section>
+
+    <!-- BOTÓN GUARDAR -->
+    <ion-button
+      class="save-button"
+      type="submit"
+      color="primary"
+      expand="block"
+    >
+      Guardar cambios
+    </ion-button>
+  </form>
+</ion-content>
